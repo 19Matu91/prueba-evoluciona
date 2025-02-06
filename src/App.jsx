@@ -10,9 +10,12 @@ function App() {
 
   const [data, setData] = useState([]);
 
+  const [isListSelected, setIsListSelected] = useState(true)
+
+  const toggleView = () => setIsListSelected(!isListSelected)
+
   const getData = async () => {
     const response = await fetch(apiUrl).then(response => response.json())
-
     console.log(JSON.stringify(response[0], null, 2))
     setData(response)
   }
@@ -21,16 +24,25 @@ function App() {
     getData()
   }, [])
 
-  return <ContactsContext.Provider value={{ data, setData }}>
+  return (
+  <ContactsContext.Provider value={{ data, setData }}>
+
     <nav className='nav'>
-      <button>Formulario</button>
-      <button>Listado</button>
+      <button type="button" onClick={toggleView} className={!isListSelected ? "selected" : ""}>Formulario</button>
+      <button type="button" onClick={toggleView} className={isListSelected ? "selected" : ""}>Listado</button>
     </nav>
-    <CreateUser />
-    <div id="contacts_wrapper">
-      {data.map((item, index) => <UserCard key={index} user={item} />)}
-    </div>
+
+    {isListSelected
+      ? 
+      <div id="contacts_wrapper">
+        {data.map((item, index) => <UserCard key={index} user={item} idx={index} />)}
+      </div>
+      : 
+      <CreateUser />
+    }
+
   </ContactsContext.Provider>
+  )
 }
 
 export default App

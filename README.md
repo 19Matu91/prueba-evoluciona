@@ -1,7 +1,7 @@
 # Prueba Técnica - Equipo de Desarrollo Evoluciona
 
 ## Descripción
-Esta prueba técnica tiene como objetivo evaluar las habilidades en el desarrollo de aplicaciones web con React, el uso de React Context, uso de CSS o SCSS en todos los componentes para garantizar una interfaz visualmente limpia y responsive y el control de versiones con Git.
+Esta prueba técnica tiene como objetivo evaluar las habilidades en el desarrollo de aplicaciones web con React, el uso de React Context, uso de CSS o SCSS en todos los componentes para garantizar una interfaz visualmente limpia/responsive y el control de versiones con Git.
 
 Se deberán completar los siguientes apartados:
 

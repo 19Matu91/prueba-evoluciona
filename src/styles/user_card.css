@@ -1,0 +1,22 @@
+.userCard {
+    padding: 1em;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--background);
+    width: 300px;
+    max-width: 600px;
+}
+
+.address {
+    border: 2px solid var(--border);
+    border-radius: var(--);
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addre p {
+    display: flex;  
+    flex-direction: column;
+}

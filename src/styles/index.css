@@ -1,0 +1,23 @@
+
+#root{
+    --background: #f0f0f0;
+    --text: #C58882; 
+    --border: #DF928E;
+    --radius: 5px;
+}
+
+body{
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}

@@ -1,0 +1,61 @@
+#root {
+    --background: #f0f0f0;
+    --backgroundSecondary: #d5d5d5d;
+    --text: #C58882;
+    --border: #DF928E;
+    --radius: 2vh;
+}
+
+@font-face {
+    font-family: GoodMatcha;
+    src: url('../assets/fonts/GoodMatcha.otf') format('otf');
+}
+
+* {
+    font-family: GoodMatcha;
+}
+
+
+body {
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contacts_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+button:not([type="submit"]) {
+    width: "100%";
+    background-color: var(--text);
+    color: var(--background);
+    border: none;
+    padding: 5px;
+    border-radius:  var(--radius);
+    cursor: pointer;
+    transition: 1s all;
+}
+
+button:not([type="submit"]):hover {
+    background-color: var(--background);
+    scale: 1.1;
+    rotate: 3deg;
+    color: var(--text)
+}
+
+button.selected {
+    background-color: var(--backgroundSecondary) ;
+}

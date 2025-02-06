@@ -1,0 +1,2 @@
+## VITE ENV ACCESS
+import.meta.env.VITE_FETCH_API_URL
